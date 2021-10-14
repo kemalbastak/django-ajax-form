@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="mt-3 mx-5">
+    <div class="alert-box"></div>
+    <div class="img-box"></div>
+    <div class="card">
+        <div class="card-body">
+            <form action="" id="form-submit">
+                {% csrf_token %}
+                {{form}}
+                <br>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+
+            </form>
+        </div>
+    </div>
+    
+
+</div>
+
+
+{% endblock content %}
