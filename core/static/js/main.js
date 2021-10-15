@@ -8,7 +8,7 @@ const link = document.getElementById('id_link')
 const email = document.getElementById('id_email')
 const image = document.getElementById('id_image')
 const uuid_input = document.getElementById('id_uuid')
-var uuidBox = document.getElementById('uuid-box')
+const alertBox = document.getElementById('alert-box')
 var imgBox = document.getElementById('img-box')
 
 
@@ -20,6 +20,12 @@ image.addEventListener('change', ()=>{
     imgBox.innerHTML = `<img src="${url}"  width="100"/>`
     console.log(imgBox)
 })
+
+const handleAlerts = (type, text) => {
+    alertBox.innerHTML = `<div class="alert alert-${type}" role="alert">
+    ${text}
+  </div>`
+}
 
 form.addEventListener('submit', e=>{
     e.preventDefault()
@@ -48,7 +54,24 @@ form.addEventListener('submit', e=>{
         enctype: 'multipart/form-data',
         data: formData,
         success: function(response){
-            uuidBox.innerHTML = `<h2>${uuid}</h2>`
+            var href = window.location.href
+            if (href.includes("/tr/")) {
+                uuidBox.innerHTML = handleAlerts("primary", `Kullanıcı kodunuz buradadır : ${uuid}`)
+            }
+            else if(href.includes("/en/")){
+                uuidBox.innerHTML = handleAlerts("primary", `User code is here: ${uuid}`)
+            }
+
+        },
+        error: function(response){
+            var href = window.location.href
+            if (href.includes("/tr/")) {
+                uuidBox.innerHTML = handleAlerts("danger", "Hata... Formu gönderirken bir hata oluştu.")
+            }
+            else if(href.includes("/en/")){
+                uuidBox.innerHTML = handleAlerts("danger", "Error... An error occured while sending the form.")
+            }
+
 
         },
         processData: false,

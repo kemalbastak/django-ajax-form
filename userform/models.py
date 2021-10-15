@@ -14,12 +14,3 @@ class UserEntry(models.Model):
 
     def __str__(self) -> str:
         return f"{self.header}"
-
-
-class Language(models.Model):
-    language = models.CharField(max_length=20)
-    shortcut = models.CharField(max_length=5)
-    flag = models.ImageField(blank = True)
-
-    def __str__(self) -> str:
-        return f"{self.language}"

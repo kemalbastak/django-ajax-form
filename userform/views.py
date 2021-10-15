@@ -27,9 +27,15 @@ def search(request):
     result = ""
     if 'q' in request.GET:
         search = request.GET['q']
-        if search:
-            result = UserEntry.objects.get(uuid=search)
-            print(UserEntry.objects.get(uuid=search))
+        try:
+            if search:
+                result = UserEntry.objects.get(uuid=search)
+        except UserEntry.DoesNotExist:
+            context = {
+                "result": result
+            }
+            return render(request, "userform/search.html", context)
+            
     context = {
         'result': result,
     }

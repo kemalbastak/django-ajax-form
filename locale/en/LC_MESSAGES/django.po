@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 17:13+0300\n"
+"POT-Creation-Date: 2021-10-15 18:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,45 +27,49 @@ msgstr "Home"
 msgid "Sorgula"
 msgstr "Query"
 
-#: templates/userform/home.html:18 templates/userform/home.html:19
-#: templates/userform/search.html:13
+#: templates/userform/home.html:19 templates/userform/home.html:20
+#: templates/userform/search.html:14
 msgid "Başlık"
 msgstr "Header"
 
-#: templates/userform/home.html:21 templates/userform/home.html:22
-#: templates/userform/search.html:14
+#: templates/userform/home.html:22 templates/userform/home.html:23
+#: templates/userform/search.html:15
 msgid "Açıklama"
 msgstr "Description"
 
-#: templates/userform/home.html:24 templates/userform/home.html:25
-#: templates/userform/search.html:15
+#: templates/userform/home.html:25 templates/userform/home.html:26
+#: templates/userform/search.html:16
 msgid "Link"
 msgstr "Link"
 
-#: templates/userform/home.html:27 templates/userform/home.html:28
-#: templates/userform/search.html:16
+#: templates/userform/home.html:28 templates/userform/home.html:29
+#: templates/userform/search.html:17
 msgid "Email"
 msgstr "Email"
 
-#: templates/userform/home.html:30 templates/userform/search.html:17
+#: templates/userform/home.html:31 templates/userform/search.html:18
 msgid "Resim"
 msgstr "Picture"
 
-#: templates/userform/home.html:35
+#: templates/userform/home.html:36
 msgid "Gönder"
 msgstr "Submit"
 
-#: templates/userform/search.html:12
+#: templates/userform/search.html:13
 msgid "Kod"
 msgstr "Code"
 
-#: templates/userform/search.html:28
+#: templates/userform/search.html:29
 msgid "resim"
 msgstr "picture"
 
-#: templates/userform/search.html:30
+#: templates/userform/search.html:31
 msgid "Resim Bulunamadı"
 msgstr "Picture Not Found"
+
+#: templates/userform/search.html:37
+msgid "Kullanıcı Bulunamadı... Lütfen girdiğiniz kodu kontrol ediniz."
+msgstr "User could not be found... Please re-check the code that you entered"
 
 #: venv/lib/python3.8/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"

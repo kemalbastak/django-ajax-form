@@ -1,21 +1,15 @@
-/* .card{
-    max-width: 500px;
-    align-items: center;
-} */
 li{
     display: none;
 }
 
 input[type=search] {
-    width: 1000px;
-    -webkit-transition: width 0.9s ease-in-out;
-    transition: width 0.9s ease-in-out;
+    -webkit-transition: width 2s ease;
+    transition: width 2s ease;
   }
   
-  /* When the input field gets focus, change its width to 100% */
-  input[type=search]:focus {
-    width: 90%;
-  }
+input[type=search]:focus {
+  width: 80%;
+}
 
 .no-image{
   color: tomato;
