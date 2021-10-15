@@ -7,7 +7,7 @@ python3 -m venv venv
 
 Activate venv
 ```
-source /venv/bin/activate
+source venv/bin/activate
 ```
 
 Install requirements.txt
