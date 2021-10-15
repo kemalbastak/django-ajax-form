@@ -1,7 +1,7 @@
 {% load i18n %}
 <div class="card" id="navbarSupportedContent">
   <div class="card-body">
-    <a href="{% url 'home' %}">{% trans "Ana Sayfa" %}</a>
+    <a href="{% url 'home' %}">{% trans "Ana Sayfa" %}</a><span> |</span>
     <a href="{% url 'search' %}">{% trans "Sorgula" %}</a>
     <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0" method="GET">
       <input class="form-control mr-sm-2" type="search" placeholder="{% trans "Sorgula" %}" name="q" aria-label="{% trans "Sorgula" %}">

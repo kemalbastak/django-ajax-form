@@ -56,20 +56,38 @@ form.addEventListener('submit', e=>{
         success: function(response){
             var href = window.location.href
             if (href.includes("/tr/")) {
-                uuidBox.innerHTML = handleAlerts("primary", `Kullanıcı kodunuz buradadır : ${uuid}`)
+                handleAlerts("primary", `Kullanıcı kodunuz buradadır : <span class="text-success">${uuid}</span><br>Tekrar kod almak için 3 saniye bekleyiniz.`)
+                setTimeout(()=>{
+                    header.value = ""
+                    description.value = ""
+                    link.value = ""
+                    email.value = ""
+                    image.value = ""
+
+                }, 3000)
             }
             else if(href.includes("/en/")){
-                uuidBox.innerHTML = handleAlerts("primary", `User code is here: ${uuid}`)
+                handleAlerts("primary", `User code is here: <span class="text-success">${uuid}</span><br> To get the code again please wait for 3 seconds`)
+                setTimeout(()=>{
+                    header.value = ""
+                    description.value = ""
+                    link.value = ""
+                    email.value = ""
+                    image.value = ""
+
+                }, 3000)
             }
 
         },
         error: function(response){
             var href = window.location.href
             if (href.includes("/tr/")) {
-                uuidBox.innerHTML = handleAlerts("danger", "Hata... Formu gönderirken bir hata oluştu.")
+                handleAlerts("danger", "Hata... Formu gönderirken bir hata oluştu.")
+                
             }
             else if(href.includes("/en/")){
-                uuidBox.innerHTML = handleAlerts("danger", "Error... An error occured while sending the form.")
+                handleAlerts("danger", "Error... An error occured while sending the form.")
+                
             }
 
 

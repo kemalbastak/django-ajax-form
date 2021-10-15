@@ -3,8 +3,8 @@ li{
 }
 
 input[type=search] {
-    -webkit-transition: width 2s ease;
-    transition: width 2s ease;
+    -webkit-transition: width 0.9s ease;
+    transition: width 0.9s ease;
   }
   
 input[type=search]:focus {
