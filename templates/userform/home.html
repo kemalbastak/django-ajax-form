@@ -4,18 +4,40 @@
 
 {% block content %}
 
+
+
 <div class="mt-3 mx-5">
     <div class="alert-box"></div>
-    <div class="img-box"></div>
+    
     <div class="card">
+        
         <div class="card-body">
+        {% include 'includes/navbar.html' %}
+        
             <form action="" id="form-submit">
                 {% csrf_token %}
-                {{form}}
-                <br>
-                <button type="submit" class="btn btn-primary">Gönder</button>
+                <label for="id_header">Başlık:</label>
+                <input type="text" name="header" maxlength="50" placeholder="Başlık" class="form-control" required="" id="id_header">
 
+                <label for="id_description">Açıklama:</label>
+                <textarea name="description" cols="40" rows="4" maxlength="300" placeholder="Açıklama" class="form-control" required="" id="id_description"></textarea>
+
+                <label for="id_link">Link:</label>
+                <input type="text" name="link" maxlength="255" placeholder="Link" class="form-control" required="" id="id_link">
+
+                <label for="id_email">Email:</label>
+                <input type="email" name="email" maxlength="254" placeholder="E-Mail" class="form-control" required="" id="id_email">
+
+                <label for="id_header">Başlık:</label>
+                <input type="file" name="image" accept="image/*" class="form-control" id="id_image">
+
+                <br>
+                <div id="img-box"></div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
             </form>
+            <div id = "uuid-box">
+            </div>
+            <div id="img-box"></div>
         </div>
     </div>
     

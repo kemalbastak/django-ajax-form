@@ -1,7 +1,10 @@
 from django.db import models
+import uuid
+
 
 # Create your models here.
 class UserEntry(models.Model):
+    uuid = models.CharField(max_length=50)
     header = models.CharField(max_length=50)
     description = models.TextField(max_length=300)
     link = models.CharField(max_length=255)
@@ -11,6 +14,7 @@ class UserEntry(models.Model):
 
     def __str__(self) -> str:
         return f"{self.header}"
+
 
 class Language(models.Model):
     language = models.CharField(max_length=20)
