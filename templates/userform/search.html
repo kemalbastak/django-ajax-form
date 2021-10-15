@@ -1,2 +1,37 @@
-{{result.header}}
-{{result.uuid}}
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+    {% include 'includes/navbar.html' %}
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr> <!-- This is the first row -->
+                    <th>{% trans "Kod" %}</th>
+                    <th>{% trans "Başlık" %}</th>
+                    <th>{% trans "Açıklama" %}</th>
+                    <th>{% trans "Link" %}</th>
+                    <th>{% trans "Email" %}</th>
+                    <th>{% trans "Resim" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <!-- This is the second row -->
+                    <td>{{result.uuid}}</td>
+                    <td>{{result.header}}</td>
+                    <td>{{result.description}}</td>
+                    <td>{{result.link}}</td>
+                    <td>{{result.email}}</td>
+                    {% if result.image %}
+                        <td><img src="{{result.image.url}}" alt="{% trans "resim" %}" width="100"></td>
+                    {% endif %}
+                        <td class="no-image">{% trans "Resim Bulunamadı" %}</td>
+                </tr>
+            <tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}

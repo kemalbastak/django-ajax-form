@@ -9,7 +9,7 @@ class UserEntry(models.Model):
     description = models.TextField(max_length=300)
     link = models.CharField(max_length=255)
     email = models.EmailField(max_length=254)
-    image = models.ImageField(upload_to='photos/uploaded_images', blank = True)
+    image = models.ImageField(blank = True)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
@@ -19,7 +19,7 @@ class UserEntry(models.Model):
 class Language(models.Model):
     language = models.CharField(max_length=20)
     shortcut = models.CharField(max_length=5)
-    flag = models.ImageField(upload_to='photos/uploaded_images', blank = True)
+    flag = models.ImageField(blank = True)
 
     def __str__(self) -> str:
         return f"{self.language}"

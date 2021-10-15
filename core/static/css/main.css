@@ -16,3 +16,12 @@ input[type=search] {
   input[type=search]:focus {
     width: 90%;
   }
+
+.no-image{
+  color: tomato;
+  font-weight: 500;
+}
+
+.lang-bar{
+  float: right;
+}

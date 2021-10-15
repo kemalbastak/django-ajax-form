@@ -21,7 +21,6 @@ def home(request):
         'form': form,
         'uuid': data['uuid']
     }
-    print(context['uuid'])
     return render(request, 'userform/home.html', context)
 
 def search(request):
@@ -30,8 +29,10 @@ def search(request):
         search = request.GET['q']
         if search:
             result = UserEntry.objects.get(uuid=search)
+            print(UserEntry.objects.get(uuid=search))
     context = {
         'result': result,
     }
+
     return render(request, "userform/search.html", context)
 
